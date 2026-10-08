@@ -1,0 +1,4 @@
+{
+  "domain": "https://YOUR-DOMAIN",
+  "_note": "The live web address, e.g. https://www.example.pt (no trailing slash). After changing it run: python tools/build_pages.py"
+}

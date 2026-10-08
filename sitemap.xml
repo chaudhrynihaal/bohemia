@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://YOUR-DOMAIN/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/?lang=pt"/>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN/?lang=pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/?lang=pt"/>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN/garden</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/garden"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/garden?lang=pt"/>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN/garden?lang=pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/garden"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/garden?lang=pt"/>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN/penthouse</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/penthouse"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/penthouse?lang=pt"/>
+  </url>
+  <url>
+    <loc>https://YOUR-DOMAIN/penthouse?lang=pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://YOUR-DOMAIN/penthouse"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://YOUR-DOMAIN/penthouse?lang=pt"/>
+  </url>
+</urlset>
