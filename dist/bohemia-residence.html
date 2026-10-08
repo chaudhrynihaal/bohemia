@@ -252,9 +252,6 @@ p { margin: 0 0 1.2em; }
 .lang button { opacity: .5; transition: opacity .4s; }
 .lang button.is-active { opacity: 1; }
 .nav__menu { display: none; }
-.nav__wa { display: none; position: relative; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid currentColor; opacity: .85; transition: opacity .3s; }
-.nav__wa::before { content: ''; position: absolute; inset: -4px; }
-.nav__wa:hover { opacity: 1; }
 
 .menu {
   position: fixed; inset: 0; z-index: 60; background: var(--ivory);
@@ -741,7 +738,6 @@ figcaption { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; c
   .nav { grid-template-columns: 1fr auto; }
   .nav__menu { display: inline-block; }
   .nav__cta { display: none; }
-  .nav__wa { display: inline-flex; }
   .nav__right { gap: 16px; }
   .collection__stage { grid-template-columns: 1fr; }
   .map { grid-template-columns: 1fr; }
@@ -1451,7 +1447,6 @@ figcaption { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; c
     <div class="nav__right">
       <div class="lang"><button data-lang="en">EN</button><span>|</span><button data-lang="pt">PT</button></div>
       <a class="nav__cta" id="navEnquiry" href="index.html#enquiry" data-i18n="nav.enquiry">Enquire</a>
-      <a class="nav__wa" data-contact="whatsapp" href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
       <button class="nav__menu" id="menuOpen" data-i18n="nav.menu">Menu</button>
     </div>
   </header>
@@ -1559,7 +1554,7 @@ figcaption { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; c
       <p class="eyebrow center" data-reveal data-i18n="enq.eyebrow">Enquiries</p>
       <h2 class="h2" id="rpCtaTitle" data-reveal></h2>
       <a class="btn dark" id="rpCta" href="index.html#enquiry" data-reveal><span data-i18n="rp.cta">Enquire about this residence</span><span>→</span></a>
-      <p class="rp-direct" data-reveal><a data-contact="whatsapp" href="#">WhatsApp <span class="v"></span></a><span aria-hidden="true">·</span><a data-contact="email" href="#"><span class="v"></span></a></p>
+      <p class="rp-direct" data-reveal><a data-contact="email" href="#"><span class="v"></span></a></p>
     </section>
   </main>
 
@@ -1567,7 +1562,6 @@ figcaption { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; c
     <div class="footer__top">
       <a class="footer__logo" href="index.html"><b>BOHEMIA</b><small data-i18n="brand.foot">By Bohemian Group · Estoril</small></a>
       <div class="footer__links">
-        <a data-contact="whatsapp" href="#"><span>WhatsApp</span></a>
         <a data-contact="email" href="#"><span class="v"></span></a>
         <a href="#" data-i18n="foot.privacy">Privacy</a>
         <a href="#" data-i18n="foot.cookies">Cookies</a>
@@ -1648,9 +1642,7 @@ window.BOHEMIA = {
 
   // Direct contact (shown in the enquiry section and footer)
   contact: {
-    email: 'sales@bohemiangroup.com',
-    whatsapp: '351964759237',          // international format, digits only (Portugal +351)
-    whatsappDisplay: '+351 964 759 237'
+    email: 'sales@bohemiangroup.com'
   },
 
   units: [
@@ -2007,13 +1999,13 @@ window.I18N = {
     'enq.name': 'Full name', 'enq.email': 'Email', 'enq.phone': 'Telephone', 'enq.country': 'Country of residence',
     'enq.interest': 'Residence of interest', 'enq.any': 'Not yet decided', 'enq.role': 'I am enquiring as',
     'enq.role.buyer': 'A private buyer', 'enq.role.advisor': 'An advisor or agent', 'enq.role.office': 'A family office',
-    'enq.contact': 'Preferred contact', 'enq.c.email': 'Email', 'enq.c.phone': 'Telephone', 'enq.c.wa': 'WhatsApp',
+    'enq.contact': 'Preferred contact', 'enq.c.email': 'Email', 'enq.c.phone': 'Telephone',
     'enq.message': 'Message (optional)',
     'enq.consent': 'I agree that Bohemian Group may contact me about Bohemia. My details will be handled in line with the privacy policy.',
     'enq.send': 'Send enquiry',
     'enq.sending': 'Sending…', 'enq.error': 'Your enquiry could not be sent. Please try again in a moment.',
     'enq.missing': 'Please add your name, a valid email and tick the privacy consent.',
-    'enq.direct': 'Or contact us directly', 'wa.msg': 'Hello, I would like to know more about Bohemia.', 'wa.msg.r': 'Hello, I would like to know more about {name} at Bohemia.',
+    'enq.direct': 'Or contact us directly',
     'enq.thanks.t': 'Thank you.', 'enq.img.alt': 'Living room, computer-generated image',
     'enq.thanks.d': 'We will be in touch with you personally, within one working day.',
     'foot.legal': 'Bohemia is developed by Bohemian Group. All images are computer-generated and indicative. Areas are approximate and subject to final confirmation. Furniture is not included.',
@@ -2118,13 +2110,13 @@ window.I18N = {
     'enq.name': 'Nome completo', 'enq.email': 'Email', 'enq.phone': 'Telefone', 'enq.country': 'País de residência',
     'enq.interest': 'Residência de interesse', 'enq.any': 'Ainda não decidi', 'enq.role': 'Contacto na qualidade de',
     'enq.role.buyer': 'Comprador particular', 'enq.role.advisor': 'Consultor ou agente', 'enq.role.office': 'Family office',
-    'enq.contact': 'Contacto preferido', 'enq.c.email': 'Email', 'enq.c.phone': 'Telefone', 'enq.c.wa': 'WhatsApp',
+    'enq.contact': 'Contacto preferido', 'enq.c.email': 'Email', 'enq.c.phone': 'Telefone',
     'enq.message': 'Mensagem (opcional)',
     'enq.consent': 'Aceito que o Bohemian Group me contacte sobre o Bohemia. Os meus dados serão tratados de acordo com a política de privacidade.',
     'enq.send': 'Enviar pedido',
     'enq.sending': 'A enviar…', 'enq.error': 'Não foi possível enviar o seu pedido. Por favor, tente novamente dentro de momentos.',
     'enq.missing': 'Indique o seu nome, um email válido e assinale o consentimento de privacidade.',
-    'enq.direct': 'Ou contacte-nos diretamente', 'wa.msg': 'Olá, gostaria de saber mais sobre o Bohemia.', 'wa.msg.r': 'Olá, gostaria de saber mais sobre a {name} no Bohemia.',
+    'enq.direct': 'Ou contacte-nos diretamente',
     'enq.thanks.t': 'Obrigado.', 'enq.img.alt': 'Sala, imagem gerada por computador',
     'enq.thanks.d': 'Entraremos pessoalmente em contacto consigo no prazo de um dia útil.',
     'foot.legal': 'O Bohemia é promovido pelo Bohemian Group. Todas as imagens são geradas por computador e meramente indicativas. As áreas são aproximadas e sujeitas a confirmação final. O mobiliário não está incluído.',
@@ -2240,17 +2232,10 @@ window.I18N = {
       App.renderContact();
       if (window.ScrollTrigger) ScrollTrigger.refresh();
     },
-    // direct contact links: any element with data-contact="whatsapp" | "email"
-    context: null, // set by a residence page so WhatsApp mentions that residence
+    // direct contact links: any element with data-contact="email"
+    context: null, // set by a residence page so the email subject names that residence
     renderContact() {
       const c = window.BOHEMIA.contact || {};
-      const msg = App.context ? App.t('wa.msg.r', { name: App.context }) : App.t('wa.msg');
-      document.querySelectorAll('[data-contact="whatsapp"]').forEach(a => {
-        if (!c.whatsapp) { a.hidden = true; return; }
-        a.href = 'https://wa.me/' + c.whatsapp + '?text=' + encodeURIComponent(msg);
-        a.target = '_blank'; a.rel = 'noopener';
-        const v = a.querySelector('.v'); if (v) v.textContent = c.whatsappDisplay || ('+' + c.whatsapp);
-      });
       document.querySelectorAll('[data-contact="email"]').forEach(a => {
         if (!c.email) { a.hidden = true; return; }
         a.href = 'mailto:' + c.email + '?subject=' + encodeURIComponent('Bohemia' + (App.context ? ' — ' + App.context : ''));
@@ -2461,7 +2446,7 @@ window.I18N = {
       '@context': 'https://schema.org',
       '@graph': [
         { '@type': 'Organization', '@id': base + '#developer', name: 'Bohemian Group',
-          email: B.contact && B.contact.email, telephone: B.contact && B.contact.whatsappDisplay },
+          email: B.contact && B.contact.email },
         { '@type': 'Residence', '@id': base + '#bohemia', name: 'Bohemia', url: base,
           description: I18N.en['line.all.2'],
           address: { '@type': 'PostalAddress', streetAddress: 'Avenida da Dinamarca', addressLocality: 'Estoril', addressCountry: 'PT' },

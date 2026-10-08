@@ -25,9 +25,7 @@ window.BOHEMIA = {
 
   // Direct contact (shown in the enquiry section and footer)
   contact: {
-    email: 'sales@bohemiangroup.com',
-    whatsapp: '351964759237',          // international format, digits only (Portugal +351)
-    whatsappDisplay: '+351 964 759 237'
+    email: 'sales@bohemiangroup.com'
   },
 
   units: [
@@ -384,13 +382,13 @@ window.I18N = {
     'enq.name': 'Full name', 'enq.email': 'Email', 'enq.phone': 'Telephone', 'enq.country': 'Country of residence',
     'enq.interest': 'Residence of interest', 'enq.any': 'Not yet decided', 'enq.role': 'I am enquiring as',
     'enq.role.buyer': 'A private buyer', 'enq.role.advisor': 'An advisor or agent', 'enq.role.office': 'A family office',
-    'enq.contact': 'Preferred contact', 'enq.c.email': 'Email', 'enq.c.phone': 'Telephone', 'enq.c.wa': 'WhatsApp',
+    'enq.contact': 'Preferred contact', 'enq.c.email': 'Email', 'enq.c.phone': 'Telephone',
     'enq.message': 'Message (optional)',
     'enq.consent': 'I agree that Bohemian Group may contact me about Bohemia. My details will be handled in line with the privacy policy.',
     'enq.send': 'Send enquiry',
     'enq.sending': 'Sending…', 'enq.error': 'Your enquiry could not be sent. Please try again in a moment.',
     'enq.missing': 'Please add your name, a valid email and tick the privacy consent.',
-    'enq.direct': 'Or contact us directly', 'wa.msg': 'Hello, I would like to know more about Bohemia.', 'wa.msg.r': 'Hello, I would like to know more about {name} at Bohemia.',
+    'enq.direct': 'Or contact us directly',
     'enq.thanks.t': 'Thank you.', 'enq.img.alt': 'Living room, computer-generated image',
     'enq.thanks.d': 'We will be in touch with you personally, within one working day.',
     'foot.legal': 'Bohemia is developed by Bohemian Group. All images are computer-generated and indicative. Areas are approximate and subject to final confirmation. Furniture is not included.',
@@ -495,13 +493,13 @@ window.I18N = {
     'enq.name': 'Nome completo', 'enq.email': 'Email', 'enq.phone': 'Telefone', 'enq.country': 'País de residência',
     'enq.interest': 'Residência de interesse', 'enq.any': 'Ainda não decidi', 'enq.role': 'Contacto na qualidade de',
     'enq.role.buyer': 'Comprador particular', 'enq.role.advisor': 'Consultor ou agente', 'enq.role.office': 'Family office',
-    'enq.contact': 'Contacto preferido', 'enq.c.email': 'Email', 'enq.c.phone': 'Telefone', 'enq.c.wa': 'WhatsApp',
+    'enq.contact': 'Contacto preferido', 'enq.c.email': 'Email', 'enq.c.phone': 'Telefone',
     'enq.message': 'Mensagem (opcional)',
     'enq.consent': 'Aceito que o Bohemian Group me contacte sobre o Bohemia. Os meus dados serão tratados de acordo com a política de privacidade.',
     'enq.send': 'Enviar pedido',
     'enq.sending': 'A enviar…', 'enq.error': 'Não foi possível enviar o seu pedido. Por favor, tente novamente dentro de momentos.',
     'enq.missing': 'Indique o seu nome, um email válido e assinale o consentimento de privacidade.',
-    'enq.direct': 'Ou contacte-nos diretamente', 'wa.msg': 'Olá, gostaria de saber mais sobre o Bohemia.', 'wa.msg.r': 'Olá, gostaria de saber mais sobre a {name} no Bohemia.',
+    'enq.direct': 'Ou contacte-nos diretamente',
     'enq.thanks.t': 'Obrigado.', 'enq.img.alt': 'Sala, imagem gerada por computador',
     'enq.thanks.d': 'Entraremos pessoalmente em contacto consigo no prazo de um dia útil.',
     'foot.legal': 'O Bohemia é promovido pelo Bohemian Group. Todas as imagens são geradas por computador e meramente indicativas. As áreas são aproximadas e sujeitas a confirmação final. O mobiliário não está incluído.',

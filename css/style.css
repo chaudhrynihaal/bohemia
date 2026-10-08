@@ -227,9 +227,6 @@ p { margin: 0 0 1.2em; }
 .lang button { opacity: .5; transition: opacity .4s; }
 .lang button.is-active { opacity: 1; }
 .nav__menu { display: none; }
-.nav__wa { display: none; position: relative; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; border: 1px solid currentColor; opacity: .85; transition: opacity .3s; }
-.nav__wa::before { content: ''; position: absolute; inset: -4px; }
-.nav__wa:hover { opacity: 1; }
 
 .menu {
   position: fixed; inset: 0; z-index: 60; background: var(--ivory);
@@ -716,7 +713,6 @@ figcaption { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; c
   .nav { grid-template-columns: 1fr auto; }
   .nav__menu { display: inline-block; }
   .nav__cta { display: none; }
-  .nav__wa { display: inline-flex; }
   .nav__right { gap: 16px; }
   .collection__stage { grid-template-columns: 1fr; }
   .map { grid-template-columns: 1fr; }

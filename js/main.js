@@ -67,17 +67,10 @@
       App.renderContact();
       if (window.ScrollTrigger) ScrollTrigger.refresh();
     },
-    // direct contact links: any element with data-contact="whatsapp" | "email"
-    context: null, // set by a residence page so WhatsApp mentions that residence
+    // direct contact links: any element with data-contact="email"
+    context: null, // set by a residence page so the email subject names that residence
     renderContact() {
       const c = window.BOHEMIA.contact || {};
-      const msg = App.context ? App.t('wa.msg.r', { name: App.context }) : App.t('wa.msg');
-      document.querySelectorAll('[data-contact="whatsapp"]').forEach(a => {
-        if (!c.whatsapp) { a.hidden = true; return; }
-        a.href = 'https://wa.me/' + c.whatsapp + '?text=' + encodeURIComponent(msg);
-        a.target = '_blank'; a.rel = 'noopener';
-        const v = a.querySelector('.v'); if (v) v.textContent = c.whatsappDisplay || ('+' + c.whatsapp);
-      });
       document.querySelectorAll('[data-contact="email"]').forEach(a => {
         if (!c.email) { a.hidden = true; return; }
         a.href = 'mailto:' + c.email + '?subject=' + encodeURIComponent('Bohemia' + (App.context ? ' — ' + App.context : ''));
@@ -288,7 +281,7 @@
       '@context': 'https://schema.org',
       '@graph': [
         { '@type': 'Organization', '@id': base + '#developer', name: 'Bohemian Group',
-          email: B.contact && B.contact.email, telephone: B.contact && B.contact.whatsappDisplay },
+          email: B.contact && B.contact.email },
         { '@type': 'Residence', '@id': base + '#bohemia', name: 'Bohemia', url: base,
           description: I18N.en['line.all.2'],
           address: { '@type': 'PostalAddress', streetAddress: 'Avenida da Dinamarca', addressLocality: 'Estoril', addressCountry: 'PT' },

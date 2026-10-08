@@ -600,7 +600,7 @@
     };
     if (fstep === 1) { stepOne(); return ok ? goStep(2) : fail('enq.missing1'); }
     if (fstep === 2) {
-      // telephone or WhatsApp chosen: the number becomes required (it lives on step 1)
+      // telephone chosen: the number becomes required (it lives on step 1)
       if (needPhone()) need(form.phone, form.phone.value.replace(/\D/g, '').length >= 7);
       return ok ? goStep(3) : fail('enq.missingPhone', 1);
     }
